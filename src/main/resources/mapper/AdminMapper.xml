@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyx.demo.dao.SumMapper">
+    <resultMap id="BaseResultMap" type="com.wyx.demo.entity.Sum">
+        <id column="id" property="id"></id>
+        <result column="num1" property="num1"></result>
+        <result column="num2" property="num2"></result>
+        <result column="sum" property="sum"></result>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.wyx.demo.entity.Sum" >
+        insert into t_sum (num1, num2, sum)
+        values (#{num1}, #{num2}, #{sum})
+    </insert>
+
+</mapper>
